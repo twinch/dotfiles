@@ -222,3 +222,5 @@ rumount() {
 twman () { #open man page in TextWrangler
   MANWIDTH=160 MANPAGER='col -bx' man $@ | edit -t "man $@"
 }
+
+source ./.aliases_khitomer
