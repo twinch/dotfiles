@@ -138,8 +138,8 @@ alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 # Update aliases for homebrew and node.js
-alias upbrew="brew update; brew upgrade"
-alias upnode="npm update npm -g; npm update -g"
+alias upbrew="brew update && brew upgrade && brew cleanup"
+alias upnode="npm update npm -g && npm update -g"
 
 
 # Copy from https://github.com/ttscoff/dotfiles/blob/master/.bash_profile
