@@ -76,3 +76,6 @@
 
 [push]
 	default = matching
+[user]
+	email = mail@tristanwren.com
+	name = Tristan Wren

@@ -251,3 +251,13 @@ function gi() {
 	local IFS=,
 	eval npm install --save-dev grunt-{"$*"}
 }
+
+
+# lets toss an image onto my server and pbcopy the URL
+# From: https://github.com/paulirish/dotfiles/blob/master/.functions
+function scpp() {
+    scp "$1" dh:~/tristanwren.com/i;
+    echo "http://tristanwren.com/i/$1" | pbcopy;
+    echo "Copied to clipboard: http://tristanwren.com/i/$1"
+}
+
