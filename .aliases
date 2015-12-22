@@ -228,4 +228,22 @@ twman () { #open man page in TextWrangler
   MANWIDTH=160 MANPAGER='col -bx' man $@ | edit -t "man $@"
 }
 
-source ./.aliases_khitomer
+gittyup () {
+	GITDIRS=`find ~/code -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
+	for GITDIR in $GITDIRS
+	do
+	    pushd $GITDIR
+	    git fetch --all # && git gc
+	    popd
+	done
+}
+
+gittygc () {
+	GITDIRS=`find ~/code -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
+	for GITDIR in $GITDIRS
+	do
+	    pushd $GITDIR
+	    git gc
+	    popd
+	done
+}
