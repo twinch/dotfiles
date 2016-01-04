@@ -229,7 +229,7 @@ twman () { #open man page in TextWrangler
 }
 
 gittyup () {
-	GITDIRS=`find ~/code -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
+	GITDIRS=`find $1 -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
 	for GITDIR in $GITDIRS
 	do
 	    pushd $GITDIR
@@ -239,7 +239,7 @@ gittyup () {
 }
 
 gittygc () {
-	GITDIRS=`find ~/code -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
+	GITDIRS=`find $1 -maxdepth 3 -name ".git" -type d | sed -e "s/\\.git$//"`
 	for GITDIR in $GITDIRS
 	do
 	    pushd $GITDIR
